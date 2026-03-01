@@ -73,7 +73,7 @@ nav a:active, .btn:active, .modal-close:active{
 
 /* Hero */
 .hero{
-    background-image: url("/images/hero.webp");
+    background-image: url("images/hero.webp");
     height: 40rem;
     background-repeat: no-repeat;
     background-size: cover;    
