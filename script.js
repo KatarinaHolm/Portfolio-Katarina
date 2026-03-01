@@ -38,3 +38,16 @@ function findEgg(event){
 
 window.addEventListener("keydown", findEgg);
 
+
+//close Easter egg popup
+
+const easterEggClose = document.querySelector(".easteregg-close");
+
+function closeEasterEgg(){
+    easterEggModal.classList.remove("easteregg2-show");
+}
+
+easterEggClose.addEventListener("click", closeEasterEgg);
+
+
+
