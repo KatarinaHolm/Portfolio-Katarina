@@ -16,7 +16,7 @@ body{
     color: #9492a691;
  }
 
- h3, h4, h5, p{
+ h3, h4, h5, p, li{
     margin: 0.5rem 0;
 }
 
@@ -96,7 +96,7 @@ h1{
     letter-spacing: 0.3rem;
     padding: 1rem 0;  
     margin: 1.5rem;
-    /* text-align: center;    */
+    
  }
 
  .hero-h2{
@@ -105,7 +105,7 @@ h1{
     text-shadow: 0.5rem 0.5rem 1rem #b4c0cd;
     letter-spacing: 0.3rem;
     padding: 1rem 0;    
-    /* text-align: center;    */
+    
  }
 
 
@@ -336,10 +336,9 @@ h1{
 }
 
 /* Om mig */
-.about-me{    
+.about-me, .short-facts{    
     display: grid;
-    grid-template-columns: 2fr 3fr;
-    
+    grid-template-columns: 2fr 3fr;    
 }
 
 figure{
@@ -447,18 +446,29 @@ nav{
     body {
     visibility: hidden;
     background-color: white;
+    color: black;  
+    font-family: Georgia, Times, serif; 
     }
 
     #cv, #portfolio, #about-me {
     visibility: visible;   
-    position: absolute;
-    left: 0;
+    position: static;
+    /* left: 0;
     top: 0;
-    height: inherit;  
-    width: 100%;
-    
-    color: black;  
-    font-family: Georgia, Times, serif; 
+    height: inherit;   */
+    width: 100%;   
+    }
+    .cv{
+        display: block;
+    }
+
+    .cv-item{
+        break-inside: avoid;
+       
+    }
+
+     .cv-utbildning{
+        break-after: always;
     }
 
     h2{
@@ -467,13 +477,14 @@ nav{
 
     p {  
         font-size: 12pt;    
-    }
+    }  
 
     /* om bara har github/linkedin utan länk på webbsida */
-    /* .cv-kontakt a::after{
-        content: ": (" attr(href) ")"
-    } */  
+    .a-print::after{
+        content: ": " attr(href);
+    } 
 }
+
 
 /* Easter eggs */
 .easter-egg1{
