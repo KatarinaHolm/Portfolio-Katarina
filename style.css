@@ -44,12 +44,13 @@ nav a{
     border-bottom: 2px solid transparent;
     transition: transform 0.4s ease;
 }
+
    
-nav a:hover{    
+nav a:hover, .btn:hover, .modal-close:hover{    
     transform: scale(1.1);    
 }
 
-nav a:active{    
+nav a:active, .btn:active, .modal-close:active{    
     transform: scale(0.9);    
 }
 
@@ -146,15 +147,6 @@ h1{
     transition: transform 0.4s ease;
 }
 
-.btn:hover{
-    transform: scale(1.1);
-    transition: transform 0.3s ease;
-}
-
-.btn:active{    
-    transform: scale(0.9);    
-}
-
 /* Modal - Portfolio */
 .modal{
     position: fixed;
@@ -180,8 +172,8 @@ h1{
     gap: 3rem;
     background-color:#dec091;
        
-    width: min(900px, 90%);
-    padding: 2rem;
+    width: min(950px, 90%);
+    padding: 3rem;
     border-radius: 0.2rem;
     position: relative;  
     
@@ -204,6 +196,7 @@ h1{
 }
 
 .modal-close{
+    display: inline-block;
     position: absolute;
     top: 0;
     right: 0.5rem;
@@ -444,7 +437,7 @@ nav{
 @media print {
     body {
     visibility: hidden;
-    /* background-color: white; */
+    background-color: white;
     }
 
     #cv, #portfolio, #about-me {
