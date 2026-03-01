@@ -11,17 +11,23 @@ footer.addEventListener("click", changeBackgroundColor);
 
 // Easter egg 2
 
+// !!!! lägg till remove/toggle när klickar på kryss
+
 index = 0;
-let easterEgg = ".net";
+const secretWord = ".net";
+const easterEggModal = document.querySelector(".easteregg2")
 
 function findEgg(event){
    
-    if(easterEgg[index] === event.key){
+    if(secretWord[index] === event.key){
+        
         index++;
 
-        if(index === easterEgg.length){
-        alert("Why do Java developers wear glasses? Because they can’t C#.");
-        index = 0;
+        if(index === secretWord.length){
+                        
+            easterEggModal.classList.toggle("easteregg2-show");
+        
+            index = 0;
         }
     }
 
