@@ -29,7 +29,7 @@ body{
 nav{
     display: flex;
     justify-content: flex-end;
-    
+    gap: 0.3rem;    
     padding: 1.5rem;     
 }
 
